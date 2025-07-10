@@ -5,8 +5,8 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { openAdminModal } from "../../store/slice/AdminSlice";
 import UseEffectsFile from './UseEffectsFile';
 import AddCity from './Modal/City/AddCity';
-import DeleteCity from './Modal/City/deleteCity';
-
+// import DeleteCity from './Modal/City/deleteCity';
+import DeleteCity from './Modal/City/DeleteCity'
 const Cities =() =>{
     const {adminModalData,adminModalType,modelopen} = useSelector((state)=>state.admin)
     const city = useSelector((state)=>state.admin.citiesdata)

@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter } from 'react-router'
 import store from './store/store.jsx'
 import {Provider} from 'react-redux'
-// import ToastProvider from './store/Provider/toastProvider.jsx'
 import ToastProvider from './store/Provider/ToastProvider.jsx'
 import AuthProvider from './store/Provider/AuthProvider.jsx'
 
