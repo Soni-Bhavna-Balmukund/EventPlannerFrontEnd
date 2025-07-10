@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Parisienne", "Brush Script MT", cursive;
+  --primary-bg: #b76f7a;
+  --secondary-bg: #f8eae8;
+  --color-text-on-secondary: #8e3c50;
+  --accent-bg-color: #d6a5ad !important;
+  --body-font:"Work Sans", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.primary-bg {
+  background-color: var(--primary-bg) !important;
+}
+.secondary-bg {
+  background-color: var(--secondary-bg) !important;
+}
+.fs-14 {
+  font-size: 14px;
+}
+
+.form-select {
+  background-image: none !important;
+}
+.form-select:focus {
+  border-color: #fff !important;
+  box-shadow: 0 0 0 0.25em #fff !important;
+}
+.menu a{
+  position:relative;
+  /* border-bottom:2px solid var(--primary-bg) */
+}
+.menu a:hover{
+  font-weight: 600!important;
+  color: var(--primary-bg)!important;
+}
+.menu a::before{
+  content: '';
+  position: absolute;
+  bottom: 0; /* underline sits below text */
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  /* transform-origin: center; */
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-bg); /* pink underline */
+  transition: transform 0.4s ease;
+}
+.menu a:hover::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.login-btn:hover,.search-btn:hover{
+  background-color: var(--primary-bg)!important;
+  transition: .5s ease-in-out;
+}
+
+.modal-content{
+  backdrop-filter: blur(8px) saturate(180%)!important;
+  background-color: rgba(255, 255, 255, 0.6)!important;
+  /* color:#fff!important; */
+  /* background-color: #000!important ; */
+ 
+}
+.modal-backdrop{
+  --bs-backdrop-bg: rgba(5, 5, 5, 0.3)!important; 
+  backdrop-filter: blur(16px)!important; /* Optional: add blur */
+
+}
+.modal-content input,.modal-content textarea  {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter:blur(16px);
+}
+.form-control:focus,.form-select:focus,.form-check-input:focus{
+  box-shadow: none!important;outline: none;
+}
+.form-check-input:checked {
+  background-color: var(--primary-bg)!important;
+  border-color: var(--primary-bg)!important;
+}
+
+ /* For top banner slider only */
+.SliderTop .swiper,
+.SliderTop .swiper-slide {
+  width: 100%;
+  height: 90vh !important;
+}
+
+/* For category slider only */
+/* .SliderCat .swiper,
+.SliderCat .swiper-slide {
+  width: 100%;
+  height: 40vh !important;
+} */
+.SliderCat .swiper {
+  /* width: 100%; */
+  height: auto;
+  /* Remove height here or keep it flexible */
+}
+
+.SliderCat .swiper-slide {
+  height: auto; /* or max-height if needed */
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  /* max-height: 40vh; */
+}
+
+.SliderTop .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ /* Image wrapper to control hover scale */
+.SliderCat .image-wrapper {
+  /* height: calc(100% - 32px); 
+  overflow: hidden;
+  position: relative; */
+   /* flex: 1 1 auto; */
+     aspect-ratio: 1 / 1; /* Or use height: 70%; if preferred */
+  overflow: hidden;
+}
+
+.SliderCat .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.3s ease-in-out;
+  display: block;
+}
+
+.SliderCat .image-wrapper:hover img {
+  transform: scale(1.2);
+}
+.SliderCat .cat-name  {
+  height: 32px;
+  font-weight: 500;
+  text-align: center;
+  padding: 4px 0;
+}
+.autoplay-progress {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 32px;
+  height: 32px;
+  font-size: 10px;
+  color: var(--color-text-on-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.autoplay-progress svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+    position: absolute; /* so the circle stays behind the number */
+  top: 0;
+  left: 0;
+}
+
+.autoplay-progress circle {
+  fill: none;
+  stroke: var(--color-text-on-secondary); /* change to another visible color like 'red' for testing */
+  stroke-width: 3;
+  stroke-dasharray: 126;
+  stroke-dashoffset: calc(126 * var(--progress));
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed){
+  background-color: var(--accent-bg-color) !important;
+  color: #fff !important;
+ 
+}
+
+.accordion-item:first-child .accordion-button {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+
+.slider-image {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .slider-image {
+    height: 360px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider-image {
+    height: 450px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider-image {
+    height: 520px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .mySwiper, .mySwiper2 {
+    height: 50vh;
+  }
+}

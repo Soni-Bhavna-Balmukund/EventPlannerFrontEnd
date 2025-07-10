@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #b76f7a;
+  --secondary-bg: #f8eae8;
+  --color-text-on-secondary: #8e3c50;
+  --accent-bg-color: #d6a5ad !important;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Parisienne", "Brush Script MT", cursive;
+   
+}
+
+.heightbody {
+  height: calc(100vh - 62px) !important;
+}
+
+.headicon svg {
+  font-size: 28px;
+  color: var(--color-text-on-secondary);
+  margin: 0 12px;
+  cursor: pointer;
+}
+.settingicon {
+  scale: 1.1;
+  transition: all 0.4s ease;
+}
+.settingicon:hover {
+  scale: 1.4;
+  transform: rotate(67deg) !important;
+  transition: all 0.4s ease;
+}
+
+.boxShadow{
+  box-shadow: rgb(0, 0,0,.1) 3px 3px 6px 0px ;
+}
+.textSecondary{
+  color: var(--color-text-on-secondary)!important;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: var(--secondary-bg) !important; 
+ }
+
+.table{
+  --bs-table-striped-bg: rgba(var(--secondary-bg),0) !important;
+}
+.modal-footer button{
+  background-color: var(--color-text-on-secondary);
+  border: 0;
+  padding: 10px 20px !important;
+}
+.modal-footer button:hover{
+  background-color: var(--accent-bg-color);
+}
+.modal-header,.form-label{
+  color: var(--color-text-on-secondary);
+}
+.form-control:focus,.form-control::placeholder{
+  border-color: var(--accent-bg-color) !important;
+  color: var(--primary-bg) !important;
+}
+.modal-header{
+  font-family: var(--primary-font);
+}
+
+.btn:focus-visible{
+  background-color: var(--accent-bg-color)!important;
+  border-color: var(--primary-bg)!important;
+  box-shadow: 0px 0px  4px 4px rgba(142,60,80,0.82) !important;
+}
+.offcan svg,.offcan a{
+  color: var(--color-text-on-secondary);
+  text-decoration: none;
+}
+.userinfo span{
+  display: inline-block;
+  margin-bottom: 12px;
+color: var(--color-text-on-secondary) ;
+}
+.loggedUserinfo{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.loggedUserinfo div span:first-of-type {
+  font-weight: 600;
+}
+
+.dashBooking .table-responsive{
+  overflow-x: visible !important;
+}
+@media screen and (max-width: 500px) {
+  .headicon svg{
+    font-size: 28px;
+    color: var(--color-text-on-secondary);
+    margin: 0 3px!important;
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .w-255px{
+  width: 255px!important;
+}
+}
